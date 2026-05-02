@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Question For You...</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Confetti script for success screen -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Screen 1: Intro -->
+        <div id="screen1" class="screen active">
+            <h1>Hey there! 👋</h1>
+            <p>I have a few questions for you...</p>
+            <button class="btn primary-btn" onclick="nextScreen(1, 2)">Start</button>
+        </div>
+
+        <!-- Screen 2: Question 1 -->
+        <div id="screen2" class="screen">
+            <h1>Are you a camera? 📸</h1>
+            <p>Because every time I look at you, I smile.</p>
+            <button class="btn secondary-btn" onclick="nextScreen(2, 3)">Aww, next! ✨</button>
+        </div>
+
+        <!-- Screen 3: Question 2 -->
+        <div id="screen3" class="screen">
+            <h1>Do you have a map? 🗺️</h1>
+            <p>Because I just keep getting lost in your eyes.</p>
+            <button class="btn secondary-btn" onclick="nextScreen(3, 4)">Haha, next! 😆</button>
+        </div>
+
+        <!-- Screen 4: Question 3 -->
+        <div id="screen4" class="screen">
+            <h1>Okay, enough joking... 🥺</h1>
+            <p>Now for the most serious and important question.</p>
+            <button class="btn primary-btn" onclick="nextScreen(4, 5)">I'm ready!</button>
+        </div>
+
+        <!-- Screen 5: Final Question -->
+        <div id="screen5" class="screen proposal-screen">
+            <h1 class="heart-pulse">Do You Love Me? ❤️</h1>
+            <div class="button-group">
+                <button class="btn yes-btn" onclick="acceptProposal()">Yes</button>
+                <button class="btn no-btn" id="noBtn">No</button>
+            </div>
+        </div>
+
+        <!-- Screen 6: Success -->
+        <div id="screen6" class="screen success-screen">
+            <h1>Thanks for accepting the proposal! 🥰</h1>
+            <p>I love you too! ❤️🎉</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
